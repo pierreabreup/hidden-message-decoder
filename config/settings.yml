@@ -1,0 +1,9 @@
+message:
+  passphrase: "Kans4s-i$-g01ng-by3-bye"
+  sources:
+    sentinels:
+      url: http://challenge.distribusion.com/the_one/routes?source=sentinels
+    sniffers:
+      url: http://challenge.distribusion.com/the_one/routes?source=sniffers
+    loopholes:
+      url: http://challenge.distribusion.com/the_one/routes?source=loopholes
