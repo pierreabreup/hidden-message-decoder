@@ -1,0 +1,19 @@
+version: '3.5'
+
+services:
+  app:
+    build: .
+    image: hidden-message-decoder
+    working_dir: /usr/src/app
+    environment:
+      APP_ENVIRONMENT_NAME: development
+    volumes:
+      - '.:/usr/src/app'
+      - ruby-usrlocal:/usr/local/
+
+volumes:
+  ruby-usrlocal:
+
+networks:
+  local:
+
