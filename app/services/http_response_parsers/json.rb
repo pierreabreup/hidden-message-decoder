@@ -1,9 +1,9 @@
-module HttpResponseParseService
+module HttpResponseParse
   class Json
-    def initialize(uri)
-    end
+    include BaseParse
 
     def body
+      ActiveSupport::JSON.decode(Net::HTTP.get(uri))
     end
   end
 end
