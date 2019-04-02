@@ -70,6 +70,7 @@ DEPENDENCIES
   activesupport
   byebug
   config
+  i18n
   rspec
   rubyzip
 
