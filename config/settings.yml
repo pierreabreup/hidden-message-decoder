@@ -1,5 +1,15 @@
 message:
   passphrase: "Kans4s-i$-g01ng-by3-bye"
+  valid_node_names:
+    - alpha
+    - beta
+    - gamma
+    - delta
+    - theta
+    - lambda
+    - tau
+    - psi
+    - omega
   sources:
     sentinels:
       url: http://challenge.distribusion.com/the_one/routes?source=sentinels
