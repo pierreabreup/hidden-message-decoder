@@ -7,3 +7,5 @@ message:
       url: http://challenge.distribusion.com/the_one/routes?source=sniffers
     loopholes:
       url: http://challenge.distribusion.com/the_one/routes?source=loopholes
+  destination:
+    url: https://challenge.distribusion.com/the_one/routes
