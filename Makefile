@@ -19,5 +19,5 @@ down:
 
 destroy:
 	docker-compose down
-	docker volume rm ${current_dir_name}-ruby-usrlocal
+	docker volume rm ${current_dir_name}_ruby-usrlocal
 	docker rmi hidden-message-decoder
