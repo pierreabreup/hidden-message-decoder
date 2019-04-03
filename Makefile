@@ -4,7 +4,7 @@ mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 current_dir_name := $(notdir $(patsubst %/,%,$(dir $(mkfile_path))))
 
 run:
-	docker-compose run --service-ports --rm app \
+	docker-compose run -e APP_ENVIRONMENT_NAME=production --service-ports --rm app \
 	ruby start.rb
 
 test:
