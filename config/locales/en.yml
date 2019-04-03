@@ -1,4 +1,4 @@
 en:
-  starting_app: "\n => Decoding data from sources '%{source_names}' and sending to [ %{destination} ], it will takes a while. \n"
+  starting_app: "\n => Decoding data from sources '%{source_names}' and sending them to [ %{destination} ], it will takes a while. \n"
   log_result: "\n----> All data has been sent. The send log:"
   ending_app: "\n FINISH!!"
