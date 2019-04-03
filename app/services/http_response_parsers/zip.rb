@@ -49,7 +49,7 @@ module HttpResponseParse
 
 
       rows = csv_data.split(/\n/).map do |line|
-        columns = line.split(',').map {|column| column.strip.gsub(/\A"|"$/,'') }
+        columns = line.force_encoding("utf-8").split(',').map {|column| column.strip.gsub(/\A"|"$/,'') }
         count_columns << columns.size
 
         columns
