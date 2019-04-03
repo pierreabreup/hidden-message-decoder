@@ -5,15 +5,17 @@ class Application
   def run
     load_configs
 
+    sources = Settings.message.sources
+
     logs = [
-      I18n.t(:starting_app, source_names: Settings.message.sources.keys.join(', '), destination: Settings.message.destination.url)
+      I18n.t(:starting_app, source_names: sources.map(&:name).join(', '), destination: Settings.message.destination.url)
     ]
 
     log_output = LogOutput.new(logs)
     log_output.print_console
 
     intercept = InterceptService.new
-    intercept.parse_routes
+    intercept.parse_routes(sources)
 
     log_output.logs = [I18n.t(:log_result)].concat(intercept.logs).concat [ I18n.t(:ending_app) ]
 
