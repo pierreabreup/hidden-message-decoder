@@ -14,6 +14,9 @@ test:
 dev:
 	docker-compose run --service-ports --rm app
 
+down:
+	docker-compose down
+
 destroy:
 	docker-compose down
 	docker volume rm ${current_dir_name}-ruby-usrlocal
