@@ -2,14 +2,14 @@ module RouteDecode
   class Sentinel
     include BaseDecode
 
-    def decode
+    def safe_decode
       routes = []
 
       #use 1..-1 because the first row is the csv head
       data.first[1..-1].map { |d|  d[3] = DateTime.parse(d[3]); d }
       .select { |d| node_name_valid?(d[1]) }
       .sort { |d1, d2| d1[3] <=> d2[3] }
-      .combination(2) do |combination| #I DONT KNOW IF COMBINATION IS THE RIGHT SOLUTION, BUT ALL OF THESE POST REQUEST RETURNS 201#Created (According to Insonomia Rest Client)
+      .combination(2) do |combination| #I DONT KNOW IF "COMBINATION" IS THE RIGHT SOLUTION, BUT ALL OF THESE POST REQUEST RETURNS 201#Created (According to Insonomia Rest Client)
         start_route = combination[0]
         end_route   = combination[1]
 
@@ -26,6 +26,15 @@ module RouteDecode
       end
 
       routes
+    end
+
+
+    private
+
+    def invalid_data?
+      data.first.nil? ||
+      !array?(data.first) ||
+      data.first.size < 2
     end
   end
 end

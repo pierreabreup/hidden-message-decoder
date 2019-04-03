@@ -1,8 +1,14 @@
 module RouteDecode
   module BaseDecode
     def initialize(source_name, data)
-      @data = data
+      @data = data || []
       @source_name = source_name
+    end
+
+    def decode
+      return [] if invalid_data?
+
+      safe_decode
     end
 
     private
@@ -27,6 +33,10 @@ module RouteDecode
         end_node: end_route[:node_name],
         end_time: end_route[:time]
       }
+    end
+
+    def array?(obj)
+      obj.respond_to?('bsearch')
     end
   end
 end
