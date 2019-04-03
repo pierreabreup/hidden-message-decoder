@@ -6,7 +6,7 @@ module HttpResponseParse
   class Zip
     include BaseParse
 
-    def body
+    def raw_body
       data = []
 
       ::Zip::File.open_buffer(uri.open) do |zip|
