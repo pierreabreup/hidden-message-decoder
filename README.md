@@ -3,6 +3,11 @@
 ## What is it?
 Read data from Json or CSV contents available in URLs defined on configuration files.  This project is build on Docker adn Ruby
 
+# What is the project for?
+
+The project was made to help computer programmers who are applying for positions in companies, during the interview process. However, I strongly recommend that you DO NOT COPY THIS WHOLE PROJECT, but try to use it as reference for your solution. I suggest it to you because it is important to show to your recruiter how you solve problems in a smart way without doing "copy and paste".
+
+
 ## How to run?
 
 ### Production
